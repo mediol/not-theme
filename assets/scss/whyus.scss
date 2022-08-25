@@ -1,0 +1,189 @@
+@import 'vars';
+
+.whyus__hero {
+    margin-top: 20px;
+    @media (min-width: $lg) {
+        margin-top: 65px;
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    &-img {
+        position: relative;
+        @media (min-width: $lg) {
+            width: 50%;
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('../img/decor.svg') top 25% right / 150% no-repeat;
+            transform: scaleY(-1);
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &-text {
+        padding: 0 25px;
+        @media (min-width: $lg) {
+            width: 50%;
+            padding-right: calc(130vw / 19.2);
+            padding-left: calc(200vw / 19.2);
+        }
+        .section-title {
+            margin-top: 35px;
+            font-size: 28px;
+            line-height: 1.25;
+            @media (min-width: $lg) {
+                font-size: calc(50vw / 19.2);
+                line-height: 1.35;
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
+            span {
+                display: inline;
+                color: $text;
+            }
+        }
+        .subtitle {
+            display: none;
+            @media (min-width: $lg) {
+                display: block;
+                font-size: 22px;
+                line-height: 1.5;
+                color: $dark;
+                span {
+                    color: $text;
+                }
+            }
+        }
+        .hero-main__form {
+            margin-top: 25px;
+        }
+    }
+}
+
+.business {
+    position: relative;
+    background: rgba(40, 40, 40, 0.03);
+    padding: 60px 0 0;
+    @media (min-width: $lg) {
+        padding: 130px 0 0;
+    }
+    .title_wrap {
+        .book {
+            display: none;
+            @media (min-width: $lg) {
+                display: block;
+            }
+        }
+    }
+    .section__desc {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 60px;
+        @media (min-width: $lg) {
+            margin-bottom: 130px;
+            display: flex;
+            column-gap: 35px;
+        }
+        .title_wrap, p {    
+            @media (min-width: $lg) {
+                width: 33.33%;
+            }
+        }
+        & > .book {
+            margin-top: 25px;
+            @media (min-width: $lg) {
+                display: none;
+            }
+        }
+        p {
+            font-size: 12px;
+            line-height: 1.75;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .section-title {
+        margin-bottom: 20px;
+        @media (min-width: $lg) {
+            margin-bottom: 35px;
+            span {
+                display: inline;
+            }
+        }
+    }
+    &__option-item {
+        position: relative;
+        z-index: 2;
+        padding: 15px 0;
+        font-weight: 500;
+        border-top: 1px solid rgba(40, 40, 40, 0.35);
+        &:last-child {
+            border-bottom: 1px solid rgba(40, 40, 40, 0.35);
+        }
+        @media (min-width: $lg) {
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .title_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $dark;
+            @media (min-width: $lg) {
+                width: 50%;
+            }
+        }
+        .option_counter {
+            font-size: 28px;
+            line-height: 1.18;
+            @media (min-width: $lg) {
+                font-size: calc(65vw / 19.2);
+            }
+        }
+        .option_title {
+            font-size: 14px;
+            line-height: 1.33;
+            @media (min-width: $lg) {
+                font-size: calc(22vw / 19.2);
+                line-height: 1.18;
+            }
+        }
+        .option_desc {
+            margin-top: 7px;
+            font-size: 12px;
+            line-height: 1.75;
+            @media (min-width: $lg) {
+                max-width: calc(483vw /  19.2);
+                margin-top: 0;
+                font-size: 16px;
+            }
+        }
+    }
+    .decor {
+        position: absolute;
+        top: 33vh;
+        right: -226px;
+        display: block;
+        height: 374px;
+        width: auto;
+        transform: scaleX(-1);
+        @media (min-width: $lg) {
+            top: 119px;
+            right: -138px;
+            height: calc(433vw / 19.2);
+        }
+    }
+}

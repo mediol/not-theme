@@ -1,0 +1,253 @@
+.blog .blog_listing,
+.tag .blog_listing,
+.search-results .blog_listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+.blog .blog_listing .not_listing_box,
+.tag .blog_listing .not_listing_box,
+.search-results .blog_listing .not_listing_box {
+  width: calc(33.33% - 23px);
+  box-shadow: 0px 12px 25px rgba(86, 86, 86, 0.08);
+}
+.blog .blog_listing .not_listing_box .not_listing_img,
+.tag .blog_listing .not_listing_box .not_listing_img,
+.search-results .blog_listing .not_listing_box .not_listing_img {
+  position: relative;
+}
+.blog .blog_listing .not_listing_box .not_listing_img > a::before,
+.tag .blog_listing .not_listing_box .not_listing_img > a::before,
+.search-results .blog_listing .not_listing_box .not_listing_img > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background: #e91d1f;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.blog .blog_listing .not_listing_box .not_listing_img > a:hover::before,
+.tag .blog_listing .not_listing_box .not_listing_img > a:hover::before,
+.search-results .blog_listing .not_listing_box .not_listing_img > a:hover::before {
+  opacity: 0.75;
+}
+.blog .blog_listing .not_listing_box .not_listing_img .post_tags,
+.tag .blog_listing .not_listing_box .not_listing_img .post_tags,
+.search-results .blog_listing .not_listing_box .not_listing_img .post_tags {
+  position: absolute;
+  width: fit-content;
+  top: 15px;
+  right: 12px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.blog .blog_listing .not_listing_box .not_listing_img .post_tags a,
+.tag .blog_listing .not_listing_box .not_listing_img .post_tags a,
+.search-results .blog_listing .not_listing_box .not_listing_img .post_tags a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+.blog .blog_listing .not_listing_box .not_listing_img .post_tags a:not(:last-child),
+.tag .blog_listing .not_listing_box .not_listing_img .post_tags a:not(:last-child),
+.search-results .blog_listing .not_listing_box .not_listing_img .post_tags a:not(:last-child) {
+  margin-bottom: 6px;
+}
+.blog .blog_listing .not_listing_box .not_listing_img img,
+.tag .blog_listing .not_listing_box .not_listing_img img,
+.search-results .blog_listing .not_listing_box .not_listing_img img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.blog .blog_listing .not_listing_box .excerpt,
+.tag .blog_listing .not_listing_box .excerpt,
+.search-results .blog_listing .not_listing_box .excerpt {
+  display: none;
+}
+.blog .blog_listing .not_listing_box .learn_more,
+.tag .blog_listing .not_listing_box .learn_more,
+.search-results .blog_listing .not_listing_box .learn_more {
+  display: none;
+}
+.blog .blog_listing .not_listing_box .dots,
+.tag .blog_listing .not_listing_box .dots,
+.search-results .blog_listing .not_listing_box .dots {
+  color: #e91d1f;
+  font-size: 50px;
+  text-align: right;
+  z-index: 5;
+}
+.blog .blog_listing .not_listing_box.sticky,
+.tag .blog_listing .not_listing_box.sticky,
+.search-results .blog_listing .not_listing_box.sticky {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 8.59375vw;
+  box-shadow: none;
+  justify-content: center;
+}
+.blog .blog_listing .not_listing_box.sticky h2,
+.tag .blog_listing .not_listing_box.sticky h2,
+.search-results .blog_listing .not_listing_box.sticky h2 {
+  font-size: 50px;
+}
+.blog .blog_listing .not_listing_box.sticky .not_listing_item_wrap,
+.tag .blog_listing .not_listing_box.sticky .not_listing_item_wrap,
+.search-results .blog_listing .not_listing_box.sticky .not_listing_item_wrap {
+  flex-direction: column;
+  padding: 0;
+  align-items: flex-start;
+  width: 80%;
+}
+.blog .blog_listing .not_listing_box.sticky .not_listing_img,
+.tag .blog_listing .not_listing_box.sticky .not_listing_img,
+.search-results .blog_listing .not_listing_box.sticky .not_listing_img {
+  position: relative;
+}
+.blog .blog_listing .not_listing_box.sticky .not_listing_img > a::before,
+.tag .blog_listing .not_listing_box.sticky .not_listing_img > a::before,
+.search-results .blog_listing .not_listing_box.sticky .not_listing_img > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/decor.svg") top 25% right/cover no-repeat;
+  transform: scaleY(-1);
+  opacity: 1;
+}
+.blog .blog_listing .not_listing_box.sticky .excerpt,
+.tag .blog_listing .not_listing_box.sticky .excerpt,
+.search-results .blog_listing .not_listing_box.sticky .excerpt {
+  display: block;
+  margin-bottom: 90px;
+  margin-top: 30px;
+}
+.blog .blog_listing .not_listing_box.sticky div,
+.tag .blog_listing .not_listing_box.sticky div,
+.search-results .blog_listing .not_listing_box.sticky div {
+  flex: 1;
+}
+.blog .blog_listing .not_listing_box.sticky .learn_more,
+.tag .blog_listing .not_listing_box.sticky .learn_more,
+.search-results .blog_listing .not_listing_box.sticky .learn_more {
+  display: block;
+}
+.blog .blog_listing .not_listing_box.sticky .dots,
+.tag .blog_listing .not_listing_box.sticky .dots,
+.search-results .blog_listing .not_listing_box.sticky .dots {
+  display: none;
+}
+.blog .blog_listing .blog_heading,
+.tag .blog_listing .blog_heading,
+.search-results .blog_listing .blog_heading {
+  font-weight: 600;
+  font-size: 85px;
+  line-height: 115%;
+}
+.blog .blog_listing .search form,
+.tag .blog_listing .search form,
+.search-results .blog_listing .search form {
+  position: relative;
+  width: 300px;
+  margin: 0;
+}
+.blog .blog_listing .search input:first-child,
+.tag .blog_listing .search input:first-child,
+.search-results .blog_listing .search input:first-child {
+  border-radius: 10px;
+  border: 1px solid #282828;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 19px;
+}
+.blog .blog_listing .search input:last-child,
+.tag .blog_listing .search input:last-child,
+.search-results .blog_listing .search input:last-child {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background: url("../img/search.svg") center/cover no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.blog .blog_listing .tags,
+.tag .blog_listing .tags,
+.search-results .blog_listing .tags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  min-width: 100%;
+}
+.blog .blog_listing .tags a,
+.tag .blog_listing .tags a,
+.search-results .blog_listing .tags a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(40, 40, 40, 0.35);
+  min-height: fit-content;
+  text-transform: capitalize;
+}
+.blog .blog_listing .tags a:hover,
+.tag .blog_listing .tags a:hover,
+.search-results .blog_listing .tags a:hover {
+  background-color: rgb(233, 29, 31);
+  color: white;
+}
+.blog .blog_listing .post_details h2,
+.tag .blog_listing .post_details h2,
+.search-results .blog_listing .post_details h2 {
+  text-transform: capitalize;
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+}
+.blog .blog_listing .post_details .post_date,
+.tag .blog_listing .post_details .post_date,
+.search-results .blog_listing .post_details .post_date {
+  margin: 10px 0;
+}
+.blog .blog_listing .not_listing_item_wrap,
+.tag .blog_listing .not_listing_item_wrap,
+.search-results .blog_listing .not_listing_item_wrap {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 25px 25px 25px;
+}
+.blog .blog_listing .not_listing_item_wrap .expert p,
+.tag .blog_listing .not_listing_item_wrap .expert p,
+.search-results .blog_listing .not_listing_item_wrap .expert p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+}
+.blog .blog_listing .not_listing_item_wrap .learn_more,
+.tag .blog_listing .not_listing_item_wrap .learn_more,
+.search-results .blog_listing .not_listing_item_wrap .learn_more {
+  max-width: fit-content;
+  width: 230px;
+  color: white;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 0px 9px 35px rgba(40, 40, 40, 0.15);
+  font-size: 17px;
+  border-radius: 10px;
+  padding: 16px 67px;
+}
+
+/*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,214 @@
+@import 'vars';
+
+// hero styilng
+.hero {
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &-main {
+        padding: 20px 0 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (min-width: $lg) {
+            padding: 65px 0 75px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.25;
+            @media (min-width: $lg) {
+                font-size: calc(85vw / 19.2);
+                line-height: 1.15;
+            }
+        }
+        &__cols{
+            @media (min-width: $lg){
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+        }
+        &__form {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 15px;
+            margin-top: 35px;
+            @media (min-width: $md) {
+                margin-top: 50px;
+                column-gap: 20px;
+            }
+            .locations_by_cats {
+                width: calc(50% - 10px);
+                @media (min-width: $lg) {
+                    width: 245px;
+                }
+                .nice-select {
+                    width: 100%;
+                }
+            }
+            .cat_locations {
+                &:not(:nth-child(2)) {
+                    display: none;
+                }
+            }
+
+            .book {
+                display: block;
+                margin-top: 17px;
+                text-align: center;
+                @media (min-width: $lg) {
+                    margin-top: 0;
+                    margin-left: 15px;
+                    line-height: 20px;
+                }
+            }
+        }
+        &-tests {
+            margin-top: 25px;
+            padding-right: 25px;
+            &__title {
+                color: $dark;
+                font-size: 16;
+                line-height: 19px;
+                margin-bottom: 15px;
+                span {
+                    display: inline-block;
+                    color: $text;
+                }
+                @media (min-width: $lg) {
+                    margin-bottom: 25px;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+            }
+            &__list {
+                display: flex;
+                gap: 17px;
+                font-size: 14px;
+                line-height: 16px;
+                @media (min-width: $lg) {
+                    gap: 25px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+            &__item {
+                white-space: nowrap;
+                padding-left: 20px;
+                background: url(../img/list-marker.svg) left center / 14px no-repeat;
+                @media (min-width: $lg) {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 45vh;
+        @media (min-width: $lg) {
+            height: calc(900vh / 10.8);
+        }
+        .container {
+            position: absolute;
+            width: 100%;
+            bottom: 35px;
+            left: 0;
+            @media (min-width: $lg) {
+                bottom: 75px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .book {
+            margin-top: 25px;
+            @media (min-width: $lg) {
+                margin-top: 35px;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../img/decor.svg) top right / cover no-repeat;
+            left: 0;
+            top: 0;
+            @media (min-width: $lg) {
+                transform: scaleY(-1);
+            }
+        }
+    }
+}
+
+.page-template-page-find-loc,
+.page-template-page-whyus {
+    .hero-main__form,
+    .locations_by_cats {
+        @media (min-width: $lg) {
+            display: block;
+            width: calc(345vw / 19.2);
+            .nice-select {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .hero-main__form {
+        .book {
+            height: 52px;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            @media (min-width: $lg) {
+                width: 221px;
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.animated {
+    &_1 {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        transition: stroke-dashoffset 2s;
+    }
+    &_2 {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        transition: stroke-dashoffset 2s;
+        transition-delay: 1s;
+    }
+    &_circle {
+        stroke-dasharray: 350;
+        stroke-dashoffset: 350;
+        transition: stroke-dashoffset 3s;
+        &_1 {
+            transition-delay: 2.3s;
+        }
+        &_2 {
+            transition-delay: 2.6s;
+        }
+        &_3 {
+            transition-delay: 2.9s;
+        }
+        &_4 {
+            transition-delay: 3.2s;
+        }
+        &_5 {
+            transform: scale(0);
+            transition: transform 0.7s;
+        }
+        &_6 {
+            transition-delay: 0.5s;
+        }
+    }
+    &.active {
+        stroke-dashoffset: 0;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,100 @@
+@import 'vars';
+
+//serve
+.serve {
+    &__columns {
+        @media (min-width: $lg) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__img {
+        position: relative;
+        overflow: hidden;
+        height: 253px;
+        @media (min-width: $lg) {
+            height: 659px;
+            width: 50%;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: scaleY(-1) scaleX(-1);
+            background-image: url(../img/decor.svg);
+            background-position: top right;
+            background-size: 160%;
+            background-repeat: no-repeat;
+            @media (min-width: $lg) {
+                transform: scaleY(1) scaleX(-1);
+                background-position: top left;
+                background-size: cover;
+            }
+        }
+        img {
+            display: block;
+            height: 100%;
+            width: auto;
+        }
+    }
+    &__text {
+        padding: 0 25px;
+        margin-top: 35px;
+        @media (min-width: $lg) {
+            width: 50%;
+            margin-top: 0;
+            padding-right: calc(150vw / 19.2);
+            padding-left: calc(129vw / 19.2);
+        }
+    }
+    &__title {
+        color: #000;
+        span {
+            display: inline;
+            color: $text;
+        }
+    }
+    &__list {
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 20px 30px;
+        column-count: 2;
+        margin: 20px 0 30px;
+        font-size: 14px;
+        line-height: 16px;
+        @media (min-width: $lg) {
+            // gap: 22px 50px;
+            column-count: 3;
+            margin: 35px 0 50px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__item {
+        white-space: nowrap;
+        margin-bottom: 19px;
+        display: flex;
+        column-gap: 10px;
+        &::before {
+            content: '';
+            display: block;
+            height: 14px;
+            width: 14px;
+            margin-top: 1px;
+            background: url(../img/list-marker.svg) left center / contain no-repeat;
+            @media (min-width: $lg) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+        @media (min-width: $lg) {
+            margin-bottom: 22px;
+            column-gap: 15px;
+        }
+    }
+}

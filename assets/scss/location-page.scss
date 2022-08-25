@@ -1,0 +1,123 @@
+@import 'vars';
+
+.loc_title {
+    color: $dark;
+    text-transform: capitalize;
+    span {
+        display: inline;
+    }
+    .grey {
+        color: $text;
+    }
+}
+.loc-hero-bottom {
+    height: 350px;
+    @media (min-width: $lg) {
+        height: calc(589vh / 10.8);
+    }
+
+    .book {
+        @media (min-width: $lg) {
+            max-width: 221px;
+            line-height: 17px;
+        }
+    }
+}
+.details__list {
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    @media (min-width: $lg) {
+        width: 65%;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    li {
+        display: flex;
+        column-gap: 12px;
+        @media (min-width: $lg) {
+            column-gap: 17px;
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: 17px;
+            width: 15px;
+            margin-top: 2px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media (min-width: $lg) {
+                height: 24px;
+                width: 20px;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @media (min-width: $lg) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .loc_shedule {
+        &::before {
+            background-image: url('../img/clock.svg');
+        }
+    }
+    .loc_address {
+        &::before {
+            background-image: url('../img/mark.svg');
+        }
+    }
+    .loc_phone {
+        &::before {
+            filter: brightness(25);
+            background-image: url('../img/phone.svg');
+        }
+    }
+}
+
+@import 'loc-offers', 'loc-contact';
+
+.find-location {
+    padding: 20px 0 176px;
+    @media (min-width: $lg) {
+        padding: 65px 0 115px;
+    }
+    h1 {
+        @media (min-width: $lg) {
+            font-size: calc(85vw / 19.2);
+            line-height: 1.35;
+        }
+    }
+    .container {
+        @media (min-width: $lg) {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            column-gap: calc(100vw / 19.2);
+        }
+        .loc__select,
+        .loc__map {
+            @media (min-width: $lg) {
+                width: calc(50% - (50vw / 19.2));
+            }
+        }
+        .loc__map {
+            margin-bottom: 35px;
+            height: 325px;
+            @media (min-width: $lg) {
+                height: calc(745vh / 10.8);
+                margin-bottom: 0;
+            }
+            iframe {
+                display: block;
+                width: 100%;
+                height: 325px;
+                @media (min-width: $lg) {
+                    height: calc(745vh / 10.8);
+                }
+            }
+        }
+    }
+}

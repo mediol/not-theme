@@ -1,0 +1,185 @@
+@import 'vars';
+
+// contact
+.contact {
+    padding: 60px 0;
+    @media (min-width: $lg) {
+        padding: 130px 0;
+    }
+    .container {
+        @media (min-width: $lg) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 35px;
+        }
+    }
+    &__img {
+        flex: 0 1 50%;
+        position: relative;
+        margin-bottom: 35px;
+        @media (min-width: $lg) {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 94px;
+            height: 94px;
+            background: url(../img/contact-decor.svg) center / cover no-repeat;
+            @media (min-width: $lg) {
+                height: 180px;
+                width: 180px;
+            }
+        }
+        img {
+            display: block;
+            width: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            @media (min-width: $lg) {
+                min-height: 500px;
+            }
+        }
+    }
+    &__text {
+        flex: 0 1 50%;
+    }
+    form{
+        margin-top: 25px;
+        @media(min-width: $lg) {
+            margin-top: 50px;
+        }
+        input[type=email] {
+            @media(min-width: $lg) {
+                width: calc(50% - 12.5px);
+            }
+        }
+        br{
+            display: none;
+        }
+        .wpcf7-spinner {
+            height: 0;
+        }
+    }
+    &-form {
+        &__input {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 13px 15px;
+            display: block;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(40, 40, 40, 0.15);
+            color: $dark;
+            @media (min-width: $lg) {
+                padding: 16px 20px;
+                border-radius: 10px;
+                font-size: 17px;
+                line-height: 20px;
+            }
+            &:focus{
+                outline: none;
+                border: 1px solid $dark;
+            }
+            &::placeholder {
+                color: rgba($color: $dark, $alpha: 0.35);
+            }
+        }
+        &__columns {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 15px;
+            @media (min-width: $lg) {
+                margin-bottom: 25px;
+                flex-direction: row;
+                gap: 25px;
+            }
+            .contact-form__input {
+              width: 100%;
+            }
+        }
+        &__message {
+            height: 125px;
+            resize: none;
+            margin: 15px 0 20px;
+            @media (min-width: $lg) {
+                margin-top: 25px;
+                margin-bottom: 35px;
+                height: 110px;
+            }
+        }
+    }
+}
+
+.page-contact {
+    padding: 20px 0 60px;
+    @media (min-width: $lg) {
+        padding: 90px 0 188px;
+    }
+    .container {
+        @media (min-width: $lg) {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: calc(164vw / 19.2);
+        }
+    }
+    h1 {
+        width: 100%;
+        @media (min-width: $lg) {
+            font-size: calc(85vw / 19.2);
+            line-height: 1.35;
+        }
+    }
+    .contact__form,
+    .contact__details {
+        @media (min-width: $lg) {
+            width: calc(50% - (82vw / 19.2));
+        }
+    }
+    form input[type=email] {
+        width: calc(50% - 12.5px);
+    }
+    .footer-link {
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 1.14;
+        img {
+            height: 17px;
+        }
+        @media (min-width: $lg) {
+            gap: 25px;
+            margin-bottom: 30px;
+            font-size: calc(22vw / 19.2);
+            span {
+                height: 50px;
+                width: 50px;
+            }
+            img {
+                height: 24px;
+            }
+        }
+    }
+    .footer-socials {
+        margin: 50px 0 0;
+        @media (min-width: $lg) {
+            column-gap: 25px;
+        }
+        &__item {
+            @media (min-width: $lg) {
+                height: 50px;
+                width: 50px;
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+    .footer__address {
+        margin-top: 12px;
+    }
+}

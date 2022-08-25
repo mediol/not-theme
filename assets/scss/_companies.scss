@@ -1,0 +1,109 @@
+@import 'vars';
+
+// companies
+.companies {
+    padding: 60px 0 30px;
+    @media (min-width: $lg) {
+        padding: 130px 0 65px;
+    }
+    &__slider {
+        margin: 25px 0 68px;
+        @media (min-width: $lg) {
+            margin: 50px 0;
+        }
+    }
+    &__list {
+        .slick-track {
+            column-gap: 20px;
+            @media (min-width: $lg) {
+                column-gap: 140px;
+            }
+        }
+    }
+    &__item {
+        a {
+            display: block;
+        }
+        img {
+            height: 33px;
+            width: auto;
+            @media (min-width: $lg) {
+                height: 110px;
+            }
+        }
+    }
+}
+.company-item {
+    &:not(:last-child) {
+        margin: 0 5px;
+        @media (min-width: $lg) {
+            margin-left: 0;
+            margin-right: 35px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        @media (min-width: $lg) {
+            gap: 35px;
+            margin-bottom: 25px;
+        }
+        img {
+            display: block;
+            width: 70px;
+            @media (min-width: $lg) {
+                max-width: 95px;
+            }
+        }
+    }
+    &__date {
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: 5px;
+        color: rgba($color: $dark, $alpha: 0.65);
+        @media (min-width: $lg) {
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 12px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        color: $dark;
+        @media (min-width: $lg) {
+            font-size: calc(24vw / 19.2);
+            line-height: 1.16;
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 1.75;
+        @media (min-width: $lg) {
+            font-size: 14px;
+        }
+    }
+}
+
+.single-location {
+    .companies {
+        padding: 60px 0;
+        background: rgba(40, 40, 40, 0.03);
+        @media (min-width: $lg) {
+            padding: 130px 0;
+        }
+    }
+}
+
+.page-template-page-whyus {
+    .companies {
+        padding: 60px 0;
+        background: rgba(40, 40, 40, 0.03);
+        @media (min-width: $lg) {
+            padding: 130px;
+        }
+    }
+}

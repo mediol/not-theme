@@ -1,0 +1,260 @@
+@import 'vars';
+
+// footer
+.footer {
+    padding: 35px 0 25px;
+    border-top: 1px solid rgba($color: $dark, $alpha: 0.2);
+    @media (min-width: $lg) {
+        padding: 75px 0 30px;
+    }
+    &-top {
+        position: relative;
+        display: flex;
+        &_wrap {
+            width: calc(100% - 52px);
+            @media (min-width: $lg) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .book,
+        .book_light {
+            display: none;
+            @media (min-width: $lg) {
+                display: block;
+                white-space: nowrap;
+            }
+            &:hover {
+                box-shadow: none;
+                background: $dark;
+                color: #fff;
+            }
+        }
+    }
+    .book_light {
+        border: 1px solid $dark;
+        margin-left: 25px;
+        line-height: 17px;
+    }
+    &-socials {
+        display: flex;
+        column-gap: 15px;
+        margin-top: 12px;
+        @media (min-width: $lg) {
+            column-gap: 20px;
+            margin-top: 0;
+            margin-right: calc(115vw / 19.2);
+            margin-left: calc(79vw / 19.2);
+        }
+        &__item {
+            width: 35px;
+            height: 35px;
+            border: 0.7px solid rgba(40, 40, 40, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-link {
+        color: $dark;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        @media (min-width: $lg) {
+            font-size: calc(16vw / 19.2);
+            order: 1;
+        }
+        &.footer__phone {
+            margin-top: 12px;
+            @media (min-width: $lg) {
+                margin-top: 0;
+            }
+            img {
+                width: 15px;
+            }
+        }
+        span {
+            width: 35px;
+            height: 35px;
+            border: 0.7px solid rgba(40, 40, 40, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__phone {
+        margin-left: 0px;
+        @media (min-width: $lg) {
+            margin-left: 35px;
+        }
+    }
+    &__scroll-btn {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(21, 21, 21, 0.5);
+        box-sizing: border-box;
+        border-radius: 6px;
+        margin-left: auto;
+        &::after {
+            content: '';
+            display: block;
+            height: 15px;
+            width: 15px;
+            border-top: 1.5px solid rgba(21, 21, 21, 0.5);
+            border-left: 1.5px solid rgba(21, 21, 21, 0.5);
+            transform: rotate(45deg);
+            transform-origin: 30% 60%;
+            &:hover {
+                border-color: #151515;
+            }
+            @media (min-width: $lg) {
+                height: 12px;
+                width: 12px;
+            }
+        }
+        &:hover {
+            border-color: #151515;
+        }
+        @media (min-width: $lg) {
+            height: 45px;
+            width: 45px;
+        }
+        @media (min-width: $xl) {
+            height: 55px;
+            width: 55px;
+        }
+    }
+    &-main {
+        margin-top: 25px;
+        @media (min-width: $lg) {
+            margin: 65px 0 75px;
+            display: flex;
+            column-gap: 35px;
+        }
+        .location-widget {
+            @media (min-width: $lg) {
+                width: 50%;
+            }
+        }
+        h3 {
+            margin-bottom: 17px;
+            font-size: 16px;
+            line-height: 1.18;
+            color: $dark;
+            @media (min-width: $lg) {
+                margin-bottom: 25px;
+                font-size: 22px;
+            }
+        }
+        .location__list {
+            column-count: 3;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.18;
+            @media (min-width: $lg) {
+                column-count: 4;
+                font-size: 16px;
+            }
+            li {
+                white-space: nowrap;
+                width: calc(33.33% - 20px);
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+                @media (min-width: $lg) {
+                    width: calc(33.33% - 50px);
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+    &__mobile-btns {
+        display: none;
+        @media (max-width: $md3) {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            & > * {
+                flex: 1 1 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 86px;
+        @media (max-width: 354px) {
+            text-align: center;
+            justify-content: center;
+        }
+        @media (max-width: $md) {
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .foot_menu {
+            font-size: 14px;
+            line-height: 16px;
+            @media (min-width: $lg) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 32px;
+        }
+        &__copy {
+            font-size: 10px;
+            line-height: 1.35;
+            @media (min-width: $lg) {
+                margin-right: calc(196vw / 19.2);
+                max-width: 224px;
+                font-size: 15px;
+            }
+        }
+        &__company {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 10px;
+            line-height: 1.35;
+            @media (min-width: $lg) {
+                gap: 10px;
+                font-size: 13px;
+            }
+            span {
+                width: 67px;
+                @media (min-width: $lg) {
+                    width: 87px;
+                }
+            }
+            img {
+                display: block;
+                width: 71px;
+                height: auto;
+                @media (min-width: $lg) {
+                    width: 90px;
+                }
+            }
+        }
+    }
+    .foot_menu {
+        a {
+            text-decoration: underline;
+        }
+    }
+}

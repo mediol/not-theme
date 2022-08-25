@@ -1,0 +1,121 @@
+@import 'vars';
+
+// what section
+.what {
+    padding: 60px 0;
+    @media (min-width: $lg) {
+        padding: 130px;
+    }
+    &__columns {
+        position: relative;
+        z-index: 2;
+        @media (min-width: $lg) {
+            display: flex;
+            column-gap: calc(294vw / 19.2);
+        }
+        .what-decor {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -165px;
+            top: 50vh;
+            width: 400px;
+            height: 400px;
+            transform: rotate(-45deg);
+            @media (min-width: $lg) {
+                top: 0;
+                right: -25%;
+                width: calc(662vw / 19.2);
+                height: auto;
+                transform: none;
+            }
+            @media (min-width: $xl) {
+                right: -15%;
+                height: 666px;
+            }
+        }
+    }
+    &-text {
+        @media (min-width: $lg) {
+            width: 50%;
+        }
+        &__subtitle {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.75;
+            @media (min-width: $lg) {
+                margin-top: 35px;
+                margin-bottom: 50px;
+                font-size: $html-font-size;
+            }
+        }
+    }
+    &-bottom {
+        margin-top: 60px;
+        @media (min-width: $lg) {
+            margin-top: 115px;
+        }
+        &__title {
+            color: #000;
+            margin-bottom: 25px;
+            span {
+                display: inline;
+                color: $text;
+            }
+            @media (min-width: $lg) {
+                max-width: calc(483vw / 19.2);
+                margin-bottom: 35px;
+            }
+        }
+        &__list {
+            @media (min-width: $lg) {
+                max-width: 1130px;
+                display: flex;
+                gap: 35px;
+            }
+        }
+        &__item {
+            min-height: 68px;
+            box-shadow: 0px 12px 25px rgba(86, 86, 86, 0.08);
+            border-radius: 15px;
+            padding: 15px 25px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.35;
+            position: relative;
+            color: #000;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+                @media (min-width: $lg) {
+                    margin-bottom: 0;
+                }
+            }
+            @media (min-width: $lg) {
+                max-width: calc(354vw / 19.2);
+                padding: 20px 35px;
+                font-size: 16px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 38px;
+                width: 5px;
+                border-radius: 0 10px 10px 0;
+                background: $primary;
+                @media (min-width: $lg) {
+                    height: 54px;
+                    width: 6px;
+                }
+            }
+        }
+    }
+}
